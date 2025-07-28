@@ -1,0 +1,79 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Светофор</title>
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#222222" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <style>
+    body { margin: 0; font-family: sans-serif; }
+    #colorDisplay {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 10px;
+      border-radius: 10px;
+      font-size: 20px;
+      z-index: 999;
+    }
+    #map {
+      width: 100vw;
+      height: 100vh;
+    }
+  </style>
+</head>
+<body>
+  <div id="colorDisplay">Цвет: 🟢 <br/> До смены: 10 с</div>
+  <div id="map"></div>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    const trafficLightCycle = [
+      { color: '🟥', duration: 10 },
+      { color: '🟨', duration: 3 },
+      { color: '🟢', duration: 7 }
+    ];
+    let currentIndex = 0;
+    let remaining = trafficLightCycle[currentIndex].duration;
+
+    function updateDisplay() {
+      const current = trafficLightCycle[currentIndex];
+      document.getElementById('colorDisplay').innerHTML =
+        `Цвет: ${current.color} <br/> До смены: ${remaining} с`;
+    }
+
+    setInterval(() => {
+      remaining--;
+      if (remaining <= 0) {
+        currentIndex = (currentIndex + 1) % trafficLightCycle.length;
+        remaining = trafficLightCycle[currentIndex].duration;
+      }
+      updateDisplay();
+    }, 1000);
+
+    const map = L.map('map').setView([49.0840844, 33.4358], 17);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    L.circleMarker([49.0840844, 33.4358], {
+      radius: 10,
+      color: 'black',
+      fillColor: 'lime',
+      fillOpacity: 1
+    }).addTo(map).bindPopup('Фейковый светофор');
+
+    // Service worker
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('sw.js')
+        .then(() => console.log("Service Worker зарегистрирован"))
+        .catch(err => console.error("Ошибка регистрации:", err));
+    }
+  </script>
+</body>
+</html>
