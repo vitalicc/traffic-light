@@ -13,14 +13,14 @@ function updateDisplay() {
     `Цвет: ${current.color} <br/> До смены: ${remaining} с`;
 }
 
-setInterval(() => {
+/*setInterval(() => {
   remaining--;
   if (remaining <= 0) {
     currentIndex = (currentIndex + 1) % trafficLightCycle.length;
     remaining = trafficLightCycle[currentIndex].duration;
   }
   updateDisplay();
-}, 1000);
+}, 1000);*/
 
 // Инициализация карты
 const map = L.map('map').setView([49.083798038160786, 33.4204394941353], 17);
@@ -29,7 +29,7 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
 }).addTo(map);
 
 // Светофор
-L.circleMarker([49.083798038160786, 33.4204394941353], {
+/*L.circleMarker([49.083798038160786, 33.4204394941353], {
   radius: 10,
   color: 'black',
   fillColor: 'lime',
@@ -56,4 +56,4 @@ if ('geolocation' in navigator) {
   );
 } else {
   alert("Ваш браузер не поддерживает геолокацию");
-}
+}*/
