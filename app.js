@@ -1,4 +1,4 @@
-
+/*
 const trafficLightCycle = [
   { color: '🟥', duration: 10 },
   { color: '🟨', duration: 3 },
@@ -13,7 +13,7 @@ function updateDisplay() {
     `Цвет: ${current.color} <br/> До смены: ${remaining} с`;
 }
 
-/*setInterval(() => {
+setInterval(() => {
   remaining--;
   if (remaining <= 0) {
     currentIndex = (currentIndex + 1) % trafficLightCycle.length;
