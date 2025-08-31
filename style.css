@@ -1,17 +1,77 @@
-
-body { margin: 0; font-family: sans-serif; }
-#colorDisplay {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  background: rgba(0,0,0,0.7);
-  color: white;
-  padding: 10px;
-  border-radius: 10px;
-  font-size: 20px;
-  z-index: 999;
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
-#map {
-  width: 100vw;
-  height: 100vh;
+
+    #map { 
+        height: 100vh; 
+        width: 100%; 
+        margin: 0; 
+        position: fixed; 
+        top: 0; 
+        left: 0; 
+        overflow: visible !important; /* Отключаем обрезку */
+
+        transform: translateY(+300px); /* сдвигаем весь контейнер вверх */
+    }
+    .leaflet-container { 
+        overflow: visible !important; 
+
+        background: transparent; /* Прозрачный фон */
+    }
+    .leaflet-tile-container {
+        transform-origin: center center; /* Центр вращения для тайлов */
+    }
+    .fixed-marker {
+        width: 20px;
+        height: 20px;
+        background: red;
+        border-radius: 50%;
+        border: 2px solid white;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        pointer-events: none; /* Игнорируем события мыши */
+    }
+
+.traffic-light {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 5px solid #333;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: black; /* или нужный цвет */
+}
+
+.timer {
+  position: absolute; /* чтобы точно позиционировать внутри traffic-light */
+  top: 50%;           /* центр по вертикали */
+  left: 50%;          /* центр по горизонтали */
+  transform: translate(-50%, -50%); /* корректное центрирование */
+  font-size: 50px;
+  font-weight: 900;
+  pointer-events: none; /* не блокирует клики */
+  white-space: nowrap;
+}
+
+
+.crossroad {
+  font-weight:bold; 
+  font-size: 12px;
+  margin-bottom:4px; 
+  color:indigo;"
+}
+
+/* Стрелка пользователя */
+.user-icon div {
+  width: 0;
+  height: 0;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 20px solid blue; /* стрелка всегда синяя */
+  margin: auto;
+  transform-origin: 50% 50%;
 }
