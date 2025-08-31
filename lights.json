@@ -1,0 +1,184 @@
+[
+  {
+    "description": "Гранітна/Хорольська",
+    "coords": [
+      49.08430442310465,
+      33.41616558182428
+    ],
+    "startDateTime": "2025-08-12T00:00:11",
+    "dailyStartOffset": 0,
+    "phases": {
+      "green": 39,
+      "yellow": 0,
+      "red": 33
+    }
+  },
+  {
+    "description": "Європейська/Свободи",
+    "coords": [
+      49.082808980594464,
+      33.42592096675134
+    ],
+    "startDateTime": "2025-08-13T00:00:00",
+    "dailyStartOffset": 2,
+    "phases": {
+      "green": 26,
+      "yellow": 0,
+      "red": 44
+    }
+  },
+  {
+    "description": "Водоканал",
+    "coords": [
+      49.084544079080636,
+      33.42673412556371
+    ],
+    "startDateTime": "2025-08-13T00:00:40.5",
+    "dailyStartOffset": 2,
+    "phases": {
+      "green": 38,
+      "yellow": 0,
+      "red": 32
+    }
+  },
+  {
+    "description": "Свободи/Бреста",
+    "coords": [
+      49.0863945,
+      33.4273453
+    ],
+    "startDateTime": "2025-08-13T00:01:00.5",
+    "dailyStartOffset": 2,
+    "phases": {
+      "green": 35,
+      "yellow": 0,
+      "red": 35
+    }
+  },
+  {
+    "description": "Краз",
+    "coords": [
+      49.08907057655492,
+      33.42853429721467
+    ],
+    "startDateTime": "2025-08-13T00:00:38.5",
+    "dailyStartOffset": 2,
+    "phases": {
+      "green": 34,
+      "yellow": 0,
+      "red": 46
+    }
+  },
+  {
+    "description": "Аптека",
+    "coords": [
+      49.0933922,
+      33.4302351
+    ],
+    "startDateTime": "2025-08-12T00:00:31",
+    "dailyStartOffset": 0,
+    "phases": {
+      "green": 43,
+      "yellow": 0,
+      "red": 37
+    }
+  },
+  {
+    "description": "КрАЗ 2",
+    "coords": [
+      49.0904407,
+      33.4287589
+    ],
+    "startDateTime": "2025-08-15T00:00:09",
+    "dailyStartOffset": 2,
+    "phases": {
+      "green": 23,
+      "yellow": 0,
+      "red": 57
+    }
+  },
+  {
+    "description": "Гвардейская",
+    "coords": [
+      49.0989034,
+      33.4326088
+    ],
+    "startDateTime": "2025-08-15T00:00:21",
+    "dailyStartOffset": 2,
+    "phases": {
+      "green": 33,
+      "yellow": 0,
+      "red": 37
+    }
+  },
+  {
+    "description": "Пугачева",
+    "coords": [
+      49.101825,
+      33.4338846
+    ],
+    "startDateTime": "2025-08-15T00:00:00.5",
+    "dailyStartOffset": 2,
+    "phases": {
+      "green": 38,
+      "yellow": 0,
+      "red": 48
+    }
+  },
+  {
+    "description": "Півзавод",
+    "coords": [
+      49.1081687,
+      33.4364598
+    ],
+    "startDateTime": "2025-08-16T00:00:16",
+    "dailyStartOffset": 2,
+    "phases": {
+      "green": 46,
+      "yellow": 0,
+      "red": 27
+    }
+  },
+  {
+    "description": "Спорт лайф",
+    "coords": [
+      49.1130008,
+      33.438783
+    ],
+    "startDateTime": "2025-08-16T00:00:50",
+    "dailyStartOffset": 0,
+    "phases": {
+      "green": 44,
+      "yellow": 0,
+      "red": 26
+    }
+  },
+  {
+    "description": "Казацька",
+    "coords": [
+      49.116708,
+      33.4400825
+    ],
+    "startDateTime": "2025-08-16T00:01:01.5",
+    "dailyStartOffset": 2,
+    "phases": {
+      "green": 39,
+      "yellow": 0,
+      "red": 31
+    }
+  },
+  {
+    "description": "Переяслівська/Свободи",
+    "coords": [
+      49.0812244,
+      33.4255533
+    ],
+    "startDateTime": "2025-08-25T00:00:40",
+    "dailyStartOffset": 2,
+    "phases": {
+      "green": 39,
+      "yellow": 0,
+      "red": 31
+    }
+  }
+]
