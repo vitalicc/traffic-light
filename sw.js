@@ -21,7 +21,7 @@ L.Map.include({
         // Увеличиваем halfSize с учётом коэффициента и нормализованного padding
         halfSize = halfSize.multiplyBy(expandFactor).add(new L.Point(padding[0], padding[1]).divideBy(scale * expandFactor));
 
-        console.log('HalfSize:', halfSize, 'PixelCenter:', pixelCenter, 'Scale:', scale); // Логирование для диагностики
+       // console.log('HalfSize:', halfSize, 'PixelCenter:', pixelCenter, 'Scale:', scale); // Логирование для диагностики
 
         return new L.Bounds(pixelCenter.subtract(halfSize), pixelCenter.add(halfSize));
     }
@@ -192,7 +192,7 @@ map.on('moveend', function () {
     map.setView(userLocation, map.getZoom(), { animate: false });
     fixing = false;
 
-    console.log(map.getCenter());
+   // console.log(map.getCenter());
 });
 
 // Запускаем начальную фиксацию и анимацию
