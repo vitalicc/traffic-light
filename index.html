@@ -1,27 +1,19 @@
-
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Светофор</title>
-  <link rel="manifest" href="manifest.json" />
-  <meta name="theme-color" content="#222222" />
-  <link rel="stylesheet" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Світлофор</title>
+  <link rel="stylesheet" href="style_Mark_Rotate_OK.css" />
 </head>
-<body>
-  <div id="colorDisplay">Цвет: 🟢 <br/> До смены: 10 с</div>
-  <div id="map"></div>
 
+<body>
+  <div id="map"></div>
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <script src="app.js"></script>
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('sw.js')
-        .then(() => console.log("SW зарегистрирован"))
-        .catch(err => console.error("Ошибка SW", err));
-    }
-  </script>
+  <script src="https://unpkg.com/leaflet-rotate@0.2.8/dist/leaflet-rotate.js"></script>
+  <script src="script_Mark_Rotate_OK.js"></script>
 </body>
+
 </html>
